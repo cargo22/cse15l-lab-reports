@@ -6,6 +6,8 @@ If you're wondering how to get started on your lab, here's a quick rundown as to
 However, we need to set up your coding environment.
 
 First, you're going to need an interpreter. The one we recommend is VS Code. Download links for all operating systems are found here: [Link](https://code.visualstudio.com/download)
+![image](https://user-images.githubusercontent.com/97927174/230689518-ba69dfad-d08b-4f19-860c-e6e396e4b42f.png)
+
 
 Now, if you're like me and use a Windows machine, you'll need to install Git. The Git install link for Windows users is found here: [Link](https://gitforwindows.org/)
 
