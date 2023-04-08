@@ -81,3 +81,19 @@ Remember the password I told you to remember? Input it. I understand that you wo
 ![image](https://user-images.githubusercontent.com/97927174/230694250-98b64af5-2344-4cc2-bf61-0b9e068fd00a.png)
 
 Now you have successfully connected to the remote servers in the CSE Basement!
+
+It's time to try some commands now.
+
+First, try typing in "ls -lat." When you press enter, you'll get something like this:
+
+![image](https://user-images.githubusercontent.com/97927174/230696656-ed08d697-cce1-4a84-940f-d59779e5b959.png)
+
+Now feel free to try any of these following commands and try to make some observations as to what they do :)
+
+![image](https://user-images.githubusercontent.com/97927174/230696875-beee152e-1575-4b8c-9747-d00f453281d0.png)
+
+After messing around with different commands, you can then exit using this trick: 
+
+![image](https://user-images.githubusercontent.com/97927174/230696984-7df8b06c-71ad-4a88-b5cf-8730bf5e0898.png)
+
+And then you're done! You've finally successfully worked with a remote server. Enjoy hacking!
