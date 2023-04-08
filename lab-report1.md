@@ -61,7 +61,7 @@ Now remember, replace zz with the two letters that are relevant to your unique c
 
 For example, mine looks like this: 
 
-![image](https://user-images.githubusercontent.com/97927174/230693960-6355e027-0989-42e2-8bb5-ff823032606e.png)
+![image](https://user-images.githubusercontent.com/97927174/230694374-b6c1468c-d036-4b07-b430-de13350b888e.png)
 
 Press enter, and your result should display something along the lines of :
 
