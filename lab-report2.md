@@ -41,3 +41,33 @@ Here's how it works:
 ![image](https://user-images.githubusercontent.com/97927174/233862864-575ef6e3-0c29-4f2f-a709-5b415ca25fce.png)
 
 ![image](https://user-images.githubusercontent.com/97927174/233862894-70665729-1021-4c8e-b2a6-2869f36b41a9.png)
+
+# Part 2
+In lab 3, one of the many methods that produced errors was the averageWithoutLowest method. Here is one failure-inducing input:
+
+```
+  @Test
+  public void testAverageWithoutLowest() {
+    double[] input4 = { 3 , 3 , 3 };
+    assertEquals(3, ArrayExamples.averageWithoutLowest(input4), 0.0);
+  }
+  ```
+  
+ This test resulted in an error. The expected average of the array {3,3,3} should be 3, but JUnit indicated that the expected output did not match the actual input.
+ However, not all tests resulted in an error. Here is an example of a test that did work:
+ 
+ ```  @Test
+  public void testAverageWithoutLowest() {
+    double[] input4 = { 1 , 3 , 3 , 3 };
+    assertEquals(3, ArrayExamples.averageWithoutLowest(input4), 0.0);
+  }
+  ```
+This test passed according to JUnit. In this case, when we drop the lowest, the average should be 3, and that is what the actual value is.
+Now, here are the symptoms given by JUnit. This is the first test:
+
+![image](https://user-images.githubusercontent.com/97927174/233864686-f53692eb-8427-4967-93ef-fb108bac1443.png)
+
+This is the second test:
+
+![image](https://user-images.githubusercontent.com/97927174/233864755-87d3fcde-84a6-482d-a04d-deb6e76a69b7.png)
+
