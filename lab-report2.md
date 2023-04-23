@@ -107,7 +107,7 @@ static double averageWithoutLowest(double[] arr) {
   ```
 The reason the code works now is that it distinguishes a lowest value. In the original code, we found a lowest num within in an array. However, if every number was the lowest, it wasn't counted towards the total sum. Hence, averageWithoutLowest. However, when calculating average, we just want to remove ONE value that is the lowest, not every value. This is why the array { 3, 3, 3 } returned 0, not 3. When run through the original code, every 3 in the array was considered the lowest, therefore not counting it towards the total sum. In the fixed code, I added every number in the array, giving me a total sum. Because the first for loop found the lowest value, I calculated the average by just getting the total and subtracting the lowest value, then dividing it by the length of the array minus one since we are essentially removing the lowest value in the array. This is why the new code works.
 
-#Part 3
+# Part 3
 In the past 2 labs, I have learned a lot of things that I never knew. However, the one that stood out to me the most was probably the process to start a server. It's cool to see the code I make in an IDE translate to a real URL I can type into my web browser. I know this is super bare bones stuff, but I am interested in learning how this is blown up to create real working websites that can handle user traffic and can stay up for an infinite amount of time. I found it really interesting.
   
   
