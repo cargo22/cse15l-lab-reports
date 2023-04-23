@@ -68,7 +68,7 @@ Now, here are the symptoms given by JUnit. This is the first test:
 
 ![image](https://user-images.githubusercontent.com/97927174/233864686-f53692eb-8427-4967-93ef-fb108bac1443.png)
 
-This is the second test:
+The second test passes because there is a distinct lowest number, therefore 3 is the avaerage. This is the second test:
 
 ![image](https://user-images.githubusercontent.com/97927174/233864755-87d3fcde-84a6-482d-a04d-deb6e76a69b7.png)
 
