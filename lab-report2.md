@@ -62,6 +62,7 @@ In lab 3, one of the many methods that produced errors was the averageWithoutLow
     assertEquals(3, ArrayExamples.averageWithoutLowest(input4), 0.0);
   }
   ```
+  
 This test passed according to JUnit. In this case, when we drop the lowest, the average should be 3, and that is what the actual value is.
 Now, here are the symptoms given by JUnit. This is the first test:
 
@@ -71,3 +72,42 @@ This is the second test:
 
 ![image](https://user-images.githubusercontent.com/97927174/233864755-87d3fcde-84a6-482d-a04d-deb6e76a69b7.png)
 
+Now that we have identified the bugs and systems, it is time to change the code. In order to get it to work, we need to change a bit. Here are the before and after of the code to show just how I fixed it. Here is the before:
+
+```
+static double averageWithoutLowest(double[] arr) {
+    if(arr.length < 2) { return 0.0; }
+    double lowest = arr[0];
+    for(double num: arr) {
+      if(num < lowest) { lowest = num; }
+    }
+    double sum = 0;
+    for(double num: arr) {
+      if(num != lowest) { sum += num; }
+    }
+    return sum / (arr.length - 1);
+  }
+  ```
+  
+  Here is the after:
+  
+  ```
+  static double averageWithoutLowest(double[] arr) {
+    if(arr.length < 2) { return 0.0; }
+    double lowest = arr[0];
+    for(double num: arr) {
+      if(num < lowest) { lowest = num; }
+    }
+    double sum = 0;
+    for(double num: arr) {
+       sum += num;
+    }
+    return (sum - lowest) / (arr.length - 1);
+  }
+  ```
+The reason the code works now is that it distinguishes a lowest value. In the original code, we found a lowest num within in an array. However, if every number was the lowest, it wasn't counted towards the total sum. Hence, averageWithoutLowest. However, when calculating average, we just want to remove ONE value that is the lowest, not every value. This is why the array { 3, 3, 3 } returned 0, not 3. When run through the original code, every 3 in the array was considered the lowest, therefore not counting it towards the total sum. In the fixed code, I added every number in the array, giving me a total sum. Because the first for loop found the lowest value, I calculated the average by just getting the total and subtracting the lowest value, then dividing it by the length of the array minus one since we are essentially removing the lowest value in the array. This is why the new code works.
+
+#Part 3
+In the past 2 labs, I have learned a lot of things that I never knew. However, the one that stood out to me the most was probably the process to start a server. It's cool to see the code I make in an IDE translate to a real URL I can type into my web browser. I know this is super bare bones stuff, but I am interested in learning how this is blown up to create real working websites that can handle user traffic and can stay up for an infinite amount of time. I found it really interesting.
+  
+  
