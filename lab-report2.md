@@ -40,6 +40,8 @@ Here's how it works:
 
 ![image](https://user-images.githubusercontent.com/97927174/233862864-575ef6e3-0c29-4f2f-a709-5b415ca25fce.png)
 
+For this instance, the method called is handleRequest. Here, it is important to notice that the entire URL matters. First, the path must be "add-message." Otherwise, we get a 404 error. Once the method confirms that the path is "add-message," it moves on to find the query. Note, the query part of the if statement is activated if and only if the url contains a "?". Once it finds the query, the query is split by a equals sign. The left of the equals sign (parameters[0]), must be "s" and whatever is on the right side will be printed on the page essentially. In this case, the arguments needed to get the method to work require "/add-message?s=" and then whatever value you want to print. In this case, the value is "hi."
+
 ![image](https://user-images.githubusercontent.com/97927174/233862894-70665729-1021-4c8e-b2a6-2869f36b41a9.png)
 
 # Part 2
