@@ -226,7 +226,94 @@ We see that although BAC is capital and we searched for bAc, it still highlighte
 
 Now that we've had a look at the -I extension, it's clear to see how useful it can be, especially when searching through large files and you forget the correct casing for a certain word. There are plenty of useful applciations for -I and it's important to know how to use it.
 
+## Third Option -m
 
+When scrolling through a file with less, it's hard to know how far in you are the file. Sometimes, it feels like you're scrolling forever and you just want the file to end or at least to know when the file will end. The cool thing about -m is that it tells you a percentage of how far in you are into the file. Let's test it
+
+```
+$ less -m technical/government/Alcohol_Problems/Session3-PDF.txt
+```
+
+Here is the immediate output:
+
+```
+Session 3.
+Intervening with Alcohol Problems
+in Emergency Settings
+
+Carlo C. DiClemente, PhD* Carl Soderstrom, MD
+Excessive alcohol consumption plays an important role in many of
+the medical conditions, accidents, and injuries that cause visits
+to emergency departments and trauma centers. Many studies have
+documented the presence of alcohol among patients admitted to
+emergency depart-ment1-5 and trauma center6,7 settings. Other
+studies have demonstrated that even blood alcohol concentration
+(BAC) determinations under-estimate the extent of alcohol problems
+among the patients who are triaged and treated in emergency
+settings.4,7 The prevalence of this co-factor to the emergency
+admission, and the fact that alcohol is a risk factor both for the
+first visit and for a return visit to the emergency setting, have
+occasioned a call for an effective method of intervening with
+alcohol problems in these settings.8-12 Although there are problems
+with and barriers to intervening in these settings, a number of
+studies and a few controlled trials indicate that interventions
+focused on patients' drinking can reduce the amount of drinking as
+well as injury episodes, including repeat re-admission for injury
+and other negative consequences of drinking. This review will
+examine the rationale for intervening, types of interventions and
+interveners, and barriers and concerns that need to be addressed.
+Then we will offer suggestions for research and practice related to
+intervening effectively with alcohol problems in emergency
+technical/government/Alcohol_Problems/Session3-PDF.txt 2%
+```
+
+Notice the difference? It says 2% at the end, indicating that we are only 2% in to the file. Lets go to the end and see what that looks like.
+
+```
+DiClemente agreed that efficacy in the ED setting had not been
+totally established. He noted that many practices that do not have
+efficacy or effectiveness studies behind them are adopted and
+become guidelines for standard practice. Once that happens, it is
+very difficult to get support to re-evaluate them, so it is true we
+must be careful when evaluating social science and psycho-social
+interventions. However, we are so sophisticated psychometrically
+and methodologically that virtually every piece of research can be
+dissected, revealing flaws and problems. If we continue to do that,
+we will never make any changes in services. He recommended a
+balance between the rigor of research and the application process
+that needs to happen.
+
+
+100%
+```
+
+The 100% indicated that we have reached the end of the file and that there is nothing more to be read. Pretty cool. Now you can exit the file. However, what happens when you combine -m with -E. With just -E, you kind of just scroll until you reach an end. Once you reach the end, it's too late because you're already out of the file. Therefore, combining the two allows you to know that you've reached the end of the file and that pressing the down arrow once more will exit you out the file.
+
+Let's try it:
+
+```
+$ less -m -E technical/government/Alcohol_Problems/Session4-PDF.txt
+```
+
+Here, we see that we are at the end of the file. What happens if we press down arrow one more time?
+```
+Robert Woolard favored continuing intervention research in EDs.
+He believed that the realities of our practice settings help drive
+the development of new ways of delivering counseling, for example,
+computer-based methods. While emergency physicians may not have the
+time or interest, the patients do. He suggested that research in
+trauma centers and EDs can help alcohol researchers learn more
+about the interventions they have already developed and can even
+lead to novel interventions.
+
+100%
+```
+
+This is the result:
+
+![image](https://user-images.githubusercontent.com/97927174/236700420-6a747f2a-44a0-482d-9ba6-14b768f6f5b1.png)
+
+It takes you back to the terminal, just like how -E does.
 
 
 
