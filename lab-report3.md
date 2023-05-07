@@ -50,7 +50,7 @@ Once running the command, the terminal immediately greets you with this:
 
 To better understand what is being displayed, we need to understand the use of ':' The colon basically prompts user input so that we can do certain things within the file. 
 
-After scrolling to the end of the file, we are now woondering what to do. In this case, we are now at the end of the file.
+After scrolling to the end of the file, we are now wondering what to do. In this case, we are now at the end of the file.
 
 ![image](https://user-images.githubusercontent.com/97927174/236658076-85c468ff-e125-405c-846a-75e7b65f704d.png)
 
