@@ -315,6 +315,204 @@ This is the result:
 
 It takes you back to the terminal, just like how -E does.
 
+Overall, -m is useful to know generally how long a file is and how far deep you are into reading a file. If you want to know how much reading you have left or how much longer the file is, the percentage counter allows you to get a gist of just how far in you are into a file. This could be useful in many ways, especially when combined with other options, as shown above when we combined -m with -E. -m just makes life easier for the reader.
 
+## Fourth Option -X
+
+When we use less, quitting out of file view means everything disappears and we're back in the terminal. However, what if something important was in the file and we forgot to jot it down? Now we need to revisit the file and find the important information and that could take forever. However, -X allows us to keep the file in the terminal, at least where we left off. Instead of everything disappearing, everything you just read before prompting less to quit will still appear in the terminal right above the new command line entry. Let's try it.
+
+```
+$ less -X technical/plos/pmed.0020281.txt
+```
+
+This is the output: 
+
+```
+
+        Whistleblowers serve no function if they cannot tell their stories. The present story of
+        whistleblowing—as discussed, in part, in
+        PLoS Medicine —that involves the pharmaceutical industry, pharmaceutical
+        benefit management corporations, the managed care industry, and the political and lobbying
+        forces that zealously guard their secrets could not have been told without the help of
+        courageous men and women [1, 2] For that reason, those of us who congregated in Washington,
+        D.C., on May 15th, 2005, at the invitation and support of the Public Library of Science and
+        the Government Accountability Project feel particularly humbled and grateful to these two
+        sponsors. Our convictions could not have been aired were it not for the essential First
+        Amendment work of responsible journalists, who exemplify the best in investigatory
+        research.
+        For me, whistleblowing is not a theoretical exercise. It has a human face and tangible
+        features. It is the face of children and adults who have been injured or killed by
+        misrepresented pharmaceuticals; clinical research trial results that have been sequestered
+        from the scientific community and whose incomplete findings cause injury; and
+        pharmaceuticals that are detailed to physicians, not to save lives or necessarily improve
+        the health or welfare of the recipients, but to make money.
+        In the lonely and, at times, discouraging world of whistleblowing, we whistleblowers are
+        passionate, and often successful, because our efforts have a different goal than the
+        corporations and political interests whose operations we occasionally challenge. Our goal
+        is to tell the truth. That honest effort is the source of any ethical difference we can or
+        might make. Truth is the basis for the power of a whistleblower, one that can withstand the
+        assault of unprecedented odds against being heard put forth by that sum of political power,
+        expediency, and money.
+        A whistleblower's success depends upon competent and articulate media. The debate to
+        improve the status quo—be it in pharmaceutical marketing or managed-care decision
+        making—cannot proceed or flourish without it.
+        Ralph Waldo Emerson, American essayist and philosopher (1803–1882), commented about
+        success (I have adapted his comments for all of us who gathered in Washington in mid-May
+        2005): “To leave the world a bit better, whether by a healthy child, a garden patch or a
+        redeemed social condition; to know even one life breathed easier because you have lived;
+        this is to have succeeded [as a whistleblower].
+```
+
+Okay, everything seems to be normal as it would when you normally call less. However, let's quit now. Let's see the result:
+
+```
+carlo@Carlos_Victus MINGW64 ~/Downloads/CSE/stringsearch-data-main
+$ less -X technical/plos/pmed.0020281.txt
+
+
+
+
+
+        Whistleblowers serve no function if they cannot tell their stories. The present story of
+        whistleblowing—as discussed, in part, in
+        PLoS Medicine —that involves the pharmaceutical industry, pharmaceutical
+        benefit management corporations, the managed care industry, and the political and lobbying
+        forces that zealously guard their secrets could not have been told without the help of
+        courageous men and women [1, 2] For that reason, those of us who congregated in Washington,
+        D.C., on May 15th, 2005, at the invitation and support of the Public Library of Science and
+        the Government Accountability Project feel particularly humbled and grateful to these two
+        sponsors. Our convictions could not have been aired were it not for the essential First
+        Amendment work of responsible journalists, who exemplify the best in investigatory
+        research.
+        For me, whistleblowing is not a theoretical exercise. It has a human face and tangible
+        features. It is the face of children and adults who have been injured or killed by
+        misrepresented pharmaceuticals; clinical research trial results that have been sequestered
+        from the scientific community and whose incomplete findings cause injury; and
+        pharmaceuticals that are detailed to physicians, not to save lives or necessarily improve
+        the health or welfare of the recipients, but to make money.
+        In the lonely and, at times, discouraging world of whistleblowing, we whistleblowers are
+        passionate, and often successful, because our efforts have a different goal than the
+        corporations and political interests whose operations we occasionally challenge. Our goal
+        is to tell the truth. That honest effort is the source of any ethical difference we can or
+        might make. Truth is the basis for the power of a whistleblower, one that can withstand the
+        assault of unprecedented odds against being heard put forth by that sum of political power,
+        expediency, and money.
+        A whistleblower's success depends upon competent and articulate media. The debate to
+        improve the status quo—be it in pharmaceutical marketing or managed-care decision
+
+carlo@Carlos_Victus MINGW64 ~/Downloads/CSE/stringsearch-data-main
+$
+```
+
+I'm now back at the terminal, but as you can see, all the text is still there. Therefore, I can now access the text I just read just by scrolling up in the terminal, making access to certain phrases much easier.
+
+Now let's combine it with -m. Let's see what happens.
+
+```
+$ less -X -m technical/plos/pmed.0020209.txt
+```
+
+This is the output: 
+
+```
+        A year ago, I received an E-mail from a research scientist at a major pharmaceutical
+        company. The scientist had read my articles on whistleblowers who had raised concerns about
+        the undue influence of the pharmaceutical industry on American medicine My industry source
+        had information for me about drug company practices, but—out of fear of career ruin—would
+        only talk on the condition that I would conceal the scientist's identity.
+        For the next year or so, I had repeated contacts with the scientist. As I listened to
+        this researcher—and to the other medical whistleblowers that I continued to interview—it
+        occurred to me that each whistleblower was like the proverbial blind man with a hand on the
+        elephant. Each could describe one piece of the puzzle, but the full picture could only
+        emerge by bringing these whistleblowers together.
+        With an eye to focusing on the systemic problems that have allowed American medicine to
+        be unduly influenced by industry, on May 15, 2005, I brought together five whistleblowers
+        in Washington, D. C. I asked them each to tell their story and to suggest ways to restore
+        objectivity to medicine and medical research.
+
+
+        The Whistleblowers
+        Four whistleblowers attended in person, and the anonymous industry scientist
+        participated via speakerphone. The whistleblowers came from an extraordinary variety of
+        different professional backgrounds.
+
+
+
+            David Graham
+            This Food and Drug Administration (FDA) safety officer raised concerns about the
+            cardiovascular side effects of rofecoxib (Vioxx) and other Cox-2 inhibitors. He
+9%
+```
+
+As we can see, we know that we are 9% in to the file. However, let's quit now and see the result.
+
+```
+carlo@Carlos_Victus MINGW64 ~/Downloads/CSE/stringsearch-data-main
+$ less -X -m technical/plos/pmed.0020209.txt
+
+
+
+
+
+        A year ago, I received an E-mail from a research scientist at a major pharmaceutical
+        company. The scientist had read my articles on whistleblowers who had raised concerns about
+        the undue influence of the pharmaceutical industry on American medicine My industry source
+        had information for me about drug company practices, but—out of fear of career ruin—would
+        only talk on the condition that I would conceal the scientist's identity.
+        For the next year or so, I had repeated contacts with the scientist. As I listened to
+        this researcher—and to the other medical whistleblowers that I continued to interview—it
+        occurred to me that each whistleblower was like the proverbial blind man with a hand on the
+        elephant. Each could describe one piece of the puzzle, but the full picture could only
+        emerge by bringing these whistleblowers together.
+        With an eye to focusing on the systemic problems that have allowed American medicine to
+        be unduly influenced by industry, on May 15, 2005, I brought together five whistleblowers
+        in Washington, D. C. I asked them each to tell their story and to suggest ways to restore
+        objectivity to medicine and medical research.
+
+
+        The Whistleblowers
+
+
+
+
+
+        A year ago, I received an E-mail from a research scientist at a major pharmaceutical
+        company. The scientist had read my articles on whistleblowers who had raised concerns about
+        the undue influence of the pharmaceutical industry on American medicine My industry source
+        had information for me about drug company practices, but—out of fear of career ruin—would
+        only talk on the condition that I would conceal the scientist's identity.
+        For the next year or so, I had repeated contacts with the scientist. As I listened to
+        this researcher—and to the other medical whistleblowers that I continued to interview—it
+        occurred to me that each whistleblower was like the proverbial blind man with a hand on the
+        elephant. Each could describe one piece of the puzzle, but the full picture could only
+        emerge by bringing these whistleblowers together.
+        With an eye to focusing on the systemic problems that have allowed American medicine to
+        be unduly influenced by industry, on May 15, 2005, I brought together five whistleblowers
+        in Washington, D. C. I asked them each to tell their story and to suggest ways to restore
+        objectivity to medicine and medical research.
+
+
+        The Whistleblowers
+        Four whistleblowers attended in person, and the anonymous industry scientist
+        participated via speakerphone. The whistleblowers came from an extraordinary variety of
+        different professional backgrounds.
+
+
+
+            David Graham
+            This Food and Drug Administration (FDA) safety officer raised concerns about the
+            cardiovascular side effects of rofecoxib (Vioxx) and other Cox-2 inhibitors. He
+
+carlo@Carlos_Victus MINGW64 ~/Downloads/CSE/stringsearch-data-main
+```
+
+Interesting...This still does what it's supposed, but it doesn't print out the percentage that we were at. That tells us that -X only prints out strictly the contents of the file. Therefore, you can't get confused if there's a random number printed out in the terminal. When you use -X you can be assured that what you see is only what is in the file.
+
+-X can be extremely useful. Instead of having to constantly call less again and again everytime you want to revisit a file, you can have it there in your terminal forever. All you have to do is just scroll up and find what you're looking for. This saves a bunch of effort, time, and keystrokes, making work more efficient, especially if you have to search through files.
+
+## Conclusion
+Those were four extensions to the less command. They all have their own purpose and can make life on readers much easier, especially when looking through large amounts of files with lots of contents stored in them. There are a bunch more extensions to the less command that are extremely interesting as well. If you want to look into them more, once again, visit this website: [less commands](https://phoenixnap.com/kb/less-command-in-linux).
+
+Hack like a champion!
 
 
