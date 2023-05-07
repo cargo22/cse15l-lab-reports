@@ -175,6 +175,56 @@ I know you can't see it here, but every word with 'thank' is highlighted in the 
 
 Pretty cool right. Now we will try it on a different file.
 
+```
+$ less -I technical/government/Alcohol_Problems/Session2-PDF.txt
+```
+
+Here is the immediate output:
+
+```
+Session 2.
+Identifying ED Patients with Alcohol Problems
+
+Robert Woolard, MD
+Many patients in the emergency department (ED) have alcohol
+problems, and they can be identified.1 Research on techniques used
+to identify these patients has been conducted, but several areas of
+interest should be addressed by further research. We need to
+further examine and refine alcohol-screening questionnaires in the
+ED. We need to determine the sequence and combination of questions
+and tests that constitute the best screening process. We need to
+study barriers to screening, identify factors that promote
+screening implementation, and demonstrate the impact of a screening
+program in the ED. The final aim of screening must be improved
+outcomes through referral and counseling. Identification is only
+the first step in a process of care.
+Alcohol problems defined
+Alcohol problems designate a spectrum from risk behavior to
+illness, and from problematic consumption to alcohol use disorder.
+We must be careful when interpreting the results of studies, and in
+our own design of screening procedures, that we are clear about the
+endpoints we are measuring. Clinicians in the ED are interested in
+screening for several alcohol endpoints. Acute intoxication is of
+concern to emergency physicians. Intoxication in a driver would
+certainly be considered an "alcohol problem." The blood or breath
+alcohol concentration (BAC), coupled with our clinical
+observations, may help us identify intoxication. Most alcohol
+screening tests identify patients with alcohol use disorders or
+:
+```
+
+Now let's try to find a string within the file. Let's try to find "bAc"
+
+```
+/bAC
+```
+Here is the result:
+
+![image](https://user-images.githubusercontent.com/97927174/236692098-ad2643b0-fd9d-46d4-bcbb-9ea96edc1cff.png)
+
+We see that although BAC is capital and we searched for bAc, it still highlighted the term because it ignores the case.
+
+Now that we've had a look at the -I extension, it's clear to see how useful it can be, especially when searching through large files and you forget the correct casing for a certain word. There are plenty of useful applciations for -I and it's important to know how to use it.
 
 
 
