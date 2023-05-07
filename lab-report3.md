@@ -112,7 +112,7 @@ Here is the end of the file:
 
 ![image](https://user-images.githubusercontent.com/97927174/236658574-6bbc1f1f-9a52-4890-b900-0b886ab55c60.png)
 
-That's pretty much all there is to the -E extension. It's useful to avoid extra keystrokes when navigating a file and allows exit to be much easier.
+That's pretty much all there is to the -E extension. It's useful to avoid extra keystrokes when navigating a file and allows exit to be much easier. 
 
 ## Second Option -I
 One of the many benefits of the less command is that it allows you to search for specific things within a file. However, problems may arise. What if a word is overly 
@@ -224,7 +224,7 @@ Here is the result:
 
 We see that although BAC is capital and we searched for bAc, it still highlighted the term because it ignores the case.
 
-Now that we've had a look at the -I extension, it's clear to see how useful it can be, especially when searching through large files and you forget the correct casing for a certain word. There are plenty of useful applciations for -I and it's important to know how to use it.
+Now that we've had a look at the -I extension, it's clear to see how useful it can be, especially when searching through large files and you forget the correct casing for a certain word. There are plenty of useful applciations for -I and it's important to know how to use it. Typos when we press shift for too long are bound to happen, so using the -I extension just allows extra security and room for error. The viewer no longer has to worry about correct capitalization.
 
 ## Third Option -m
 
@@ -449,30 +449,6 @@ As we can see, we know that we are 9% in to the file. However, let's quit now an
 ```
 carlo@Carlos_Victus MINGW64 ~/Downloads/CSE/stringsearch-data-main
 $ less -X -m technical/plos/pmed.0020209.txt
-
-
-
-
-
-        A year ago, I received an E-mail from a research scientist at a major pharmaceutical
-        company. The scientist had read my articles on whistleblowers who had raised concerns about
-        the undue influence of the pharmaceutical industry on American medicine My industry source
-        had information for me about drug company practices, but—out of fear of career ruin—would
-        only talk on the condition that I would conceal the scientist's identity.
-        For the next year or so, I had repeated contacts with the scientist. As I listened to
-        this researcher—and to the other medical whistleblowers that I continued to interview—it
-        occurred to me that each whistleblower was like the proverbial blind man with a hand on the
-        elephant. Each could describe one piece of the puzzle, but the full picture could only
-        emerge by bringing these whistleblowers together.
-        With an eye to focusing on the systemic problems that have allowed American medicine to
-        be unduly influenced by industry, on May 15, 2005, I brought together five whistleblowers
-        in Washington, D. C. I asked them each to tell their story and to suggest ways to restore
-        objectivity to medicine and medical research.
-
-
-        The Whistleblowers
-
-
 
 
 
