@@ -119,7 +119,7 @@ This is the result:
 
 ![image](https://github.com/cargo22/cse15l-lab-reports/assets/97927174/1dbb1677-ebf4-402d-9b5a-bbead1e6298d)
 
-When in search mode, n scrolls down so N scrolls up. However, since we are already at the first instance, N takes us to the very last instance of 'x1'. Now we are right where we want to be. Now all we have to do is change the 1 to a 2. However, because the cursor placed us at 'x' we need to shift right one character by pressing
+When in search mode, n scrolls down and N scrolls up. However, since we are already at the first instance, N takes us to the very last instance of 'x1'. Now we are right where we want to be. Now all we have to do is change the 1 to a 2. However, because the cursor placed us at 'x' we need to shift right one character by pressing
 
 ```
 l
