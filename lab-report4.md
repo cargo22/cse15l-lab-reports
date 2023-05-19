@@ -1,6 +1,6 @@
 # Working With Vim
 
-This week, we will be working with vim (and git) to make changes to code that needs to be changed. The code has errors, and we will use vim instead of a file explorer in an IDE to make edits and traverse files.
+This week, we will be working with vim (and git) to make changes to code that needs to be changed. The code we're working with has errors, and we will use vim instead of a file explorer in an IDE to make edits and traverse files.
 
 We will be completing these specific tasks:
 
