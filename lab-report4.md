@@ -1,6 +1,6 @@
 # Working With Vim
 
-This week, we will be working with vim (and git) to make changes to code that needs to be changed. The code has errors, and we will use vim instead of a file explorer in an IDE to make edit and traverse files.
+This week, we will be working with vim (and git) to make changes to code that needs to be changed. The code has errors, and we will use vim instead of a file explorer in an IDE to make edits and traverse files.
 
 We will be completing these specific tasks:
 
@@ -102,6 +102,7 @@ First, type
 ```
 /x1 <enter>
 ```
+(the '/' command allows us to search for certain patterns in a file)
 
 This is the result:
 
@@ -112,6 +113,7 @@ As you can see, it shows us the first instance in which x1 is called. So, how do
 ```
 <shift> n
 ```
+(the 'n' command while searching allows us to look through all found instances of the patter in a file)
 
 This is the result: 
 
@@ -122,6 +124,7 @@ When in search mode, n scrolls down so N scrolls up. However, since we are alrea
 ```
 l
 ```
+('l' is equvalent to the right arrow)
 
 Now the cursor is over 1.
 
@@ -132,6 +135,7 @@ Now we need to replace the one with a 2. In order to do that, we need to type:
 ```
 r2
 ```
+(the 'r' commands stands for replace and allows us to replace the value the cursor is on with the one we want to insert. Hence, the '2')
 
 Now it should be replaced. 
 
@@ -142,16 +146,56 @@ Now that we successfully edited the file, we need to save the changes and exit. 
 ```
 :wq <enter>
 ```
+('wq' stands for save and quit)
+
 Now we should be back in the terminal. 
 
 ![image](https://github.com/cargo22/cse15l-lab-reports/assets/97927174/95a273a4-3929-4724-8c50-44531bbbec97)
 
 ## Step five
 
-Now that we've made the edits, we need to rerun the tests to make sure that we've done it successfully. Because it's already in the history, we need to press <up><up> in order to be back at the bash test.sh command. Now, we press enter to rerun the tests. This is the output:
+Now that we've made the edits, we need to rerun the tests to make sure that we've done it successfully. Because it's already in the history, we need to press the up arrow twice in order to be back at the bash test.sh command. Now, we press enter to rerun the tests. This is the output:
   
 ![image](https://github.com/cargo22/cse15l-lab-reports/assets/97927174/819ac184-7f9b-4baa-a899-556372cf572b)
 
-Now that we've been assured that we successfully edited the file, we need to commit and push the changes back to our fork.
   
 ## Step six
+
+Now that we've been assured that we successfully edited the file, we need to commit and push the changes back to our fork. This is how we'll do it. First, we need to type 
+
+```
+git add ListExamples.java
+```
+If done correctly, nothing should appear and it should just prompt the next input like this: 
+
+![image](https://github.com/cargo22/cse15l-lab-reports/assets/97927174/eef3351f-9889-4db2-b491-7497ee605735)
+
+Now, we need to commit the changes using this command:
+
+```
+git commit -m "save index change"
+```
+
+Keep in mind, whatever we put in the quotation marks doesn't really matter; it's just a way to remind us of the exact changes we made.
+The result should look like this
+
+![image](https://github.com/cargo22/cse15l-lab-reports/assets/97927174/e21e888f-bfd1-49b2-af1a-f36b57145de5)
+
+Now that we have commited the changes, we need to push them to the main branch by typing this in:
+
+ ``` 
+ git push
+ ```
+ 
+ The output should look like this:
+ 
+ ![image](https://github.com/cargo22/cse15l-lab-reports/assets/97927174/6a6c3c57-bea1-4ac1-8da6-8d1ab8234e60)
+
+We have successfully made our changes and we can check for ourselves on our GitHub account. It should appear and look something like this:
+
+![image](https://github.com/cargo22/cse15l-lab-reports/assets/97927174/e4a3150c-535f-4bed-8a5b-d50111aa1231)
+
+
+## Conclusion
+
+Now you know how to edit files with vim as well as commiting those changes to the repository using git at the command line. However, it is important to note that this only works once you've set up your github account to be linked to your machine. Otherwise, you won't be able to push any commits. Hope these tips were useful!
